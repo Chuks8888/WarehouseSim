@@ -4,6 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+
+#include "gridLayout.h"
+
 #include "GridSetup.generated.h"
 
 UCLASS(Blueprintable)
@@ -24,5 +27,6 @@ public:
 		void SpawnObjects(UBlueprint* Actor, FString World, int width, int length, bool& OutputSuccess);
 
 	virtual void Tick(float DeltaTime) override;
-
+private:
+	gridLayout layout;
 };
